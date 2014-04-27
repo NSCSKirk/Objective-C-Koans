@@ -123,12 +123,17 @@
     XCTAssertEqualObjects(@"", actual);
 }
 
+- (void)testMutableArraysAreSubclassesofNSArray
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    XCTAssertTrue([array isKindOfClass:[NSArray class]]);
+}
+
 - (void)testAddingToMutableArrays
 {
     NSMutableArray *array = [NSMutableArray array];
 
-    XCTAssertTrue([array isKindOfClass:[NSArray class]]);
-    
     [array addObject:@"Peanut"];
     NSArray *expected = @[@"Peanut"];
     XCTAssertEqualObjects(expected, array);
