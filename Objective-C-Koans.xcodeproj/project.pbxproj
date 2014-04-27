@@ -21,6 +21,7 @@
 		1E06D0DC190CAF67003DCC85 /* Objective_C_KoansTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0DB190CAF67003DCC85 /* Objective_C_KoansTests.m */; };
 		1E06D0E6190CB01C003DCC85 /* AboutAsserts.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0E5190CB01C003DCC85 /* AboutAsserts.m */; };
 		1E06D0E9190CB6DA003DCC85 /* AboutNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0E8190CB6DA003DCC85 /* AboutNil.m */; };
+		1E06D0EB190CBC22003DCC85 /* AboutObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0EA190CBC22003DCC85 /* AboutObjects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1E06D0E5190CB01C003DCC85 /* AboutAsserts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutAsserts.m; sourceTree = "<group>"; };
 		1E06D0E7190CB0FC003DCC85 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1E06D0E8190CB6DA003DCC85 /* AboutNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutNil.m; sourceTree = "<group>"; };
+		1E06D0EA190CBC22003DCC85 /* AboutObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutObjects.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,10 +136,11 @@
 		1E06D0D5190CAF67003DCC85 /* Objective-C-KoansTests */ = {
 			isa = PBXGroup;
 			children = (
-				1E06D0DB190CAF67003DCC85 /* Objective_C_KoansTests.m */,
 				1E06D0D6190CAF67003DCC85 /* Supporting Files */,
-				1E06D0E5190CB01C003DCC85 /* AboutAsserts.m */,
+				1E06D0DB190CAF67003DCC85 /* Objective_C_KoansTests.m */,
 				1E06D0E7190CB0FC003DCC85 /* PrefixHeader.pch */,
+				1E06D0E5190CB01C003DCC85 /* AboutAsserts.m */,
+				1E06D0EA190CBC22003DCC85 /* AboutObjects.m */,
 				1E06D0E8190CB6DA003DCC85 /* AboutNil.m */,
 			);
 			path = "Objective-C-KoansTests";
@@ -258,6 +261,7 @@
 			files = (
 				1E06D0E9190CB6DA003DCC85 /* AboutNil.m in Sources */,
 				1E06D0DC190CAF67003DCC85 /* Objective_C_KoansTests.m in Sources */,
+				1E06D0EB190CBC22003DCC85 /* AboutObjects.m in Sources */,
 				1E06D0E6190CB01C003DCC85 /* AboutAsserts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
