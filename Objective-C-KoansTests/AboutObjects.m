@@ -58,7 +58,7 @@ static NSString * const __ = @"FILL ME IN";
 {
     UILabel *label = [[UILabel alloc] init];
     
-    XCTAssertEqualObjects(___, [UILabel class]);
+    XCTAssertEqualObjects([label class], ___);
 }
 
 - (void)testObjectIntrospection
