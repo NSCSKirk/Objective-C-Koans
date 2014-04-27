@@ -54,6 +54,13 @@ static NSString * const __ = @"FILL ME IN";
     XCTAssertTrue(___ == labelTwo);
 }
 
+- (void)testObjectClass
+{
+    UILabel *label = [[UILabel alloc] init];
+    
+    XCTAssertEqualObjects(___, [UILabel class]);
+}
+
 - (void)testObjectIntrospection
 {
     UILabel *label = [[UILabel alloc] init];
@@ -63,6 +70,13 @@ static NSString * const __ = @"FILL ME IN";
     
     //Tests if the receiver is an instance or descendant of the class
     XCTAssertTrue([___ isKindOfClass:[NSObject class]]);
+}
+
+- (void)testObjectDescription
+{
+    NSString *string = @"123";
+    
+    XCTAssertEqualObjects(___, [string description]);
 }
 
 @end
