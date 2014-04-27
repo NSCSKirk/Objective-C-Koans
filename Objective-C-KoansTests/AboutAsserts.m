@@ -10,6 +10,7 @@
 
 static const BOOL __ = NO;
 static const NSUInteger ___ = 0;
+static id const ____ = nil;
 
 @interface AboutAsserts : XCTestCase
 
@@ -41,6 +42,16 @@ static const NSUInteger ___ = 0;
     NSInteger actualValue = 1 + 1;
     
     XCTAssertEqual(expectedValue, actualValue);
+}
+
+- (void)testAssertObjectEquality
+{
+    NSString *objectOne = @"Object";
+    NSString *objectTwo = objectOne;
+    
+    //XCTAssertEqualObjects calls 'isEqual:' using the two passed objects
+    //and should be used when comparing Objective-c objects in tests
+    XCTAssertEqualObjects(____, objectTwo);
 }
 
 - (void)testFillInValues

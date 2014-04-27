@@ -33,16 +33,6 @@ static NSString * const __ = @"FILL ME IN";
     XCTAssertNotNil(___);
 }
 
-- (void)testAssertObjects
-{
-    NSString *objectOne = @"Object";
-    NSString *objectTwo = objectOne;
-    
-    //XCTAssertEqualObjects calls 'isEqual:' using the two passed objects
-    //and should be used when comparing Objective-c objects in tests
-    XCTAssertEqualObjects(__, objectTwo);
-}
-
 - (void)testObjectPointerEquality
 {
     UILabel *labelOne = [[UILabel alloc] init];
