@@ -17,11 +17,16 @@ static NSString * const __ = @"FILL ME IN";
 
 @implementation AboutNil
 
-- (void)testYouDontGetNullPointerExceptionsWhenCallingMethodsOnNil
+- (void)testCallingMethodsOnNilDoesNotRaiseException
 {
     id object = __;
     
     XCTAssertNoThrow([object stringValue]);
+}
+
+- (void)testNilEvaluatesToFalse
+{
+    XCTAssertFalse(__);
 }
 
 - (void)testNilAndNULLHaveTheSameValue
