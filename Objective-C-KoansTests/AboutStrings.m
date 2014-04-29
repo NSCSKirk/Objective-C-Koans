@@ -145,7 +145,44 @@
 
 - (void)testReplacingInStrings
 {
+    NSString *string = @"Example String";
     
+    string = [string stringByReplacingOccurrencesOfString:@"Example" withString:@"Real Life"];
+    
+    XCTAssertEqualObjects(@"Real Life String", string);
+}
+
+- (void)testAppendingString
+{
+    NSString *string = @"Example String";
+    
+    string = [string stringByAppendingString:@" For You"];
+    
+    XCTAssertEqualObjects(@"Example String For You", string);
+}
+
+- (void)testMutableStringsAreSubclassesOfNSString
+{
+    NSMutableString *string = [NSMutableString string];
+    
+    XCTAssertTrue([string isKindOfClass:[NSString class]]);
+}
+
+- (void)testMutableStringsCanBeModifiedInPlace
+{
+    NSMutableString *string = [NSMutableString string];
+    
+    [string appendString:@"Example"];
+    XCTAssertEqualObjects(@"Example", string);
+    
+    [string insertString:@" Strings" atIndex:7];
+    XCTAssertEqualObjects(@"Example Strings", string);
+    
+    [string deleteCharactersInRange:NSMakeRange(14, 1)];
+    XCTAssertEqualObjects(@"Example String", string);
+    
+    [string replaceCharactersInRange:NSMakeRange(0, 7) withString:@"Real"];
+    XCTAssertEqualObjects(@"Real String", string);
 }
 
 @end
