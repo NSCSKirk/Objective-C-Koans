@@ -25,6 +25,7 @@
 		1E06D0ED190CCDCA003DCC85 /* AboutArrays.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0EC190CCDCA003DCC85 /* AboutArrays.m */; };
 		1E06D0EF190DC82A003DCC85 /* AboutDictionaries.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0EE190DC82A003DCC85 /* AboutDictionaries.m */; };
 		1E06D0F1190DE402003DCC85 /* AboutStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0F0190DE402003DCC85 /* AboutStrings.m */; };
+		1E06D0F3190F2991003DCC85 /* AboutClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0F2190F2991003DCC85 /* AboutClasses.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		1E06D0EC190CCDCA003DCC85 /* AboutArrays.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutArrays.m; sourceTree = "<group>"; };
 		1E06D0EE190DC82A003DCC85 /* AboutDictionaries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDictionaries.m; sourceTree = "<group>"; };
 		1E06D0F0190DE402003DCC85 /* AboutStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutStrings.m; sourceTree = "<group>"; };
+		1E06D0F2190F2991003DCC85 /* AboutClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutClasses.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				1E06D0EC190CCDCA003DCC85 /* AboutArrays.m */,
 				1E06D0EE190DC82A003DCC85 /* AboutDictionaries.m */,
 				1E06D0F0190DE402003DCC85 /* AboutStrings.m */,
+				1E06D0F2190F2991003DCC85 /* AboutClasses.m */,
 			);
 			path = "Objective-C-KoansTests";
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				1E06D0F1190DE402003DCC85 /* AboutStrings.m in Sources */,
 				1E06D0E9190CB6DA003DCC85 /* AboutNil.m in Sources */,
+				1E06D0F3190F2991003DCC85 /* AboutClasses.m in Sources */,
 				1E06D0DC190CAF67003DCC85 /* Objective_C_KoansTests.m in Sources */,
 				1E06D0EB190CBC22003DCC85 /* AboutObjects.m in Sources */,
 				1E06D0E6190CB01C003DCC85 /* AboutAsserts.m in Sources */,
