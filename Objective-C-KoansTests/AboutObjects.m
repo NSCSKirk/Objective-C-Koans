@@ -24,13 +24,13 @@ static NSString * const __ = @"FILL ME IN";
     //will only use the '*' when declaring the variable.
     NSString *string = @"string";
     
-    XCTAssertNotNil(___);
+    XCTAssertNotNil(string);
     
     //The exception is when declaring a variable with 'id' since it
     //implies the pointer.
     id anotherString = @"anotherString";
     
-    XCTAssertNotNil(___);
+    XCTAssertNotNil(anotherString);
 }
 
 - (void)testObjectPointerEquality
@@ -41,14 +41,14 @@ static NSString * const __ = @"FILL ME IN";
     //Using '==' with Objective-C objects will always compare their memory address.
     //In other words, only use '==' when you want to know if two objects are
     //literally the exact same object.
-    XCTAssertTrue(___ == labelTwo);
+    XCTAssertTrue(labelOne == labelTwo);
 }
 
 - (void)testObjectClass
 {
     UILabel *label = [[UILabel alloc] init];
     
-    XCTAssertEqualObjects([label class], ___);
+    XCTAssertEqualObjects([label class], [UILabel class]);
 }
 
 - (void)testObjectIntrospection
@@ -56,17 +56,17 @@ static NSString * const __ = @"FILL ME IN";
     UILabel *label = [[UILabel alloc] init];
     
     //Tests if the receiver is an instance of the class
-    XCTAssertTrue([___ isMemberOfClass:[UILabel class]]);
+    XCTAssertTrue([label isMemberOfClass:[UILabel class]]);
     
     //Tests if the receiver is an instance or descendant of the class
-    XCTAssertTrue([___ isKindOfClass:[NSObject class]]);
+    XCTAssertTrue([label isKindOfClass:[NSObject class]]);
 }
 
 - (void)testObjectDescription
 {
     NSString *string = @"123";
     
-    XCTAssertEqualObjects(___, [string description]);
+    XCTAssertEqualObjects(@"123", [string description]);
 }
 
 @end

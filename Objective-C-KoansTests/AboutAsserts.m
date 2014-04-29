@@ -8,10 +8,6 @@
 
 #import <XCTest/XCTest.h>
 
-static const BOOL __ = NO;
-static const NSUInteger ___ = 0;
-static id const ____ = nil;
-
 @interface AboutAsserts : XCTestCase
 
 @end
@@ -20,17 +16,17 @@ static id const ____ = nil;
 
 - (void)testAssertTruth
 {
-    XCTAssert(__);
+    XCTAssert(YES);
 }
 
 - (void)testAssertTruthWithMessage
 {
-    XCTAssert(__, @"This should be YES -- please fix this");
+    XCTAssert(YES, @"This should be YES -- please fix this");
 }
 
 - (void)testAssertEquality
 {
-    NSInteger expectedValue = ___;
+    NSInteger expectedValue = 2;
     NSInteger actualValue = 1 + 1;
     
     XCTAssert(expectedValue == actualValue);
@@ -38,7 +34,7 @@ static id const ____ = nil;
 
 - (void)testABetterWayOfAssertingEquality
 {
-    NSInteger expectedValue = ___;
+    NSInteger expectedValue = 2;
     NSInteger actualValue = 1 + 1;
     
     XCTAssertEqual(expectedValue, actualValue);
@@ -51,12 +47,12 @@ static id const ____ = nil;
     
     //XCTAssertEqualObjects calls 'isEqual:' using the two passed objects
     //and should be used when comparing Objective-c objects in tests
-    XCTAssertEqualObjects(____, objectTwo);
+    XCTAssertEqualObjects(objectOne, objectTwo);
 }
 
 - (void)testFillInValues
 {
-    XCTAssertEqual(___, 1 + 1);
+    XCTAssertEqual(2, 1 + 1);
 }
 
 @end
