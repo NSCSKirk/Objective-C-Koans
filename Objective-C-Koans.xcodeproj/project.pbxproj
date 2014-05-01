@@ -29,6 +29,8 @@
 		1E06D0F5190F5183003DCC85 /* AboutBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0F4190F5183003DCC85 /* AboutBool.m */; };
 		1E06D0F91911B3AC003DCC85 /* AboutErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0F81911B3AC003DCC85 /* AboutErrorHandling.m */; };
 		1E06D0FB1911D2BC003DCC85 /* AboutSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0FA1911D2BC003DCC85 /* AboutSelectors.m */; };
+		1E3431221911FF7600A2912B /* AboutInheritance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431211911FF7600A2912B /* AboutInheritance.m */; };
+		1E3431241911FF9E00A2912B /* AboutBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431231911FF9E00A2912B /* AboutBlocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		1E06D0F4190F5183003DCC85 /* AboutBool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutBool.m; sourceTree = "<group>"; };
 		1E06D0F81911B3AC003DCC85 /* AboutErrorHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutErrorHandling.m; sourceTree = "<group>"; };
 		1E06D0FA1911D2BC003DCC85 /* AboutSelectors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutSelectors.m; sourceTree = "<group>"; };
+		1E3431211911FF7600A2912B /* AboutInheritance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutInheritance.m; sourceTree = "<group>"; };
+		1E3431231911FF9E00A2912B /* AboutBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutBlocks.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 				1E06D0F2190F2991003DCC85 /* AboutClasses.m */,
 				1E06D0F81911B3AC003DCC85 /* AboutErrorHandling.m */,
 				1E06D0FA1911D2BC003DCC85 /* AboutSelectors.m */,
+				1E3431211911FF7600A2912B /* AboutInheritance.m */,
+				1E3431231911FF9E00A2912B /* AboutBlocks.m */,
 			);
 			path = "Objective-C-KoansTests";
 			sourceTree = "<group>";
@@ -286,8 +292,10 @@
 				1E06D0FB1911D2BC003DCC85 /* AboutSelectors.m in Sources */,
 				1E06D0DC190CAF67003DCC85 /* Objective_C_KoansTests.m in Sources */,
 				1E06D0EB190CBC22003DCC85 /* AboutObjects.m in Sources */,
+				1E3431221911FF7600A2912B /* AboutInheritance.m in Sources */,
 				1E06D0E6190CB01C003DCC85 /* AboutAsserts.m in Sources */,
 				1E06D0ED190CCDCA003DCC85 /* AboutArrays.m in Sources */,
+				1E3431241911FF9E00A2912B /* AboutBlocks.m in Sources */,
 				1E06D0F5190F5183003DCC85 /* AboutBool.m in Sources */,
 				1E06D0EF190DC82A003DCC85 /* AboutDictionaries.m in Sources */,
 				1E06D0F91911B3AC003DCC85 /* AboutErrorHandling.m in Sources */,
@@ -481,6 +489,7 @@
 				1E06D0E1190CAF67003DCC85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E06D0E2190CAF67003DCC85 /* Build configuration list for PBXNativeTarget "Objective-C-KoansTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +498,7 @@
 				1E06D0E4190CAF67003DCC85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
