@@ -50,6 +50,13 @@
     XCTAssertEqualObjects(objectOne, objectTwo);
 }
 
+- (void)testAssertSpeificExceptionThrown
+{
+    NSException *exception = [NSException exceptionWithName:NSInternalInconsistencyException reason:@"" userInfo:nil];
+    
+    XCTAssertThrowsSpecificNamed([exception raise], NSException, NSInternalInconsistencyException);
+}
+
 - (void)testFillInValues
 {
     XCTAssertEqual(2, 1 + 1);
