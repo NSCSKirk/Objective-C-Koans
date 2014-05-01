@@ -26,6 +26,8 @@
 		1E06D0EF190DC82A003DCC85 /* AboutDictionaries.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0EE190DC82A003DCC85 /* AboutDictionaries.m */; };
 		1E06D0F1190DE402003DCC85 /* AboutStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0F0190DE402003DCC85 /* AboutStrings.m */; };
 		1E06D0F3190F2991003DCC85 /* AboutClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0F2190F2991003DCC85 /* AboutClasses.m */; };
+		1E06D0F5190F5183003DCC85 /* AboutBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0F4190F5183003DCC85 /* AboutBool.m */; };
+		1E06D0F91911B3AC003DCC85 /* AboutErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0F81911B3AC003DCC85 /* AboutErrorHandling.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		1E06D0EE190DC82A003DCC85 /* AboutDictionaries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDictionaries.m; sourceTree = "<group>"; };
 		1E06D0F0190DE402003DCC85 /* AboutStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutStrings.m; sourceTree = "<group>"; };
 		1E06D0F2190F2991003DCC85 /* AboutClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutClasses.m; sourceTree = "<group>"; };
+		1E06D0F4190F5183003DCC85 /* AboutBool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutBool.m; sourceTree = "<group>"; };
+		1E06D0F81911B3AC003DCC85 /* AboutErrorHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutErrorHandling.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,12 +152,14 @@
 				1E06D0DB190CAF67003DCC85 /* Objective_C_KoansTests.m */,
 				1E06D0E7190CB0FC003DCC85 /* PrefixHeader.pch */,
 				1E06D0E5190CB01C003DCC85 /* AboutAsserts.m */,
-				1E06D0EA190CBC22003DCC85 /* AboutObjects.m */,
 				1E06D0E8190CB6DA003DCC85 /* AboutNil.m */,
+				1E06D0F4190F5183003DCC85 /* AboutBool.m */,
+				1E06D0EA190CBC22003DCC85 /* AboutObjects.m */,
 				1E06D0EC190CCDCA003DCC85 /* AboutArrays.m */,
 				1E06D0EE190DC82A003DCC85 /* AboutDictionaries.m */,
 				1E06D0F0190DE402003DCC85 /* AboutStrings.m */,
 				1E06D0F2190F2991003DCC85 /* AboutClasses.m */,
+				1E06D0F81911B3AC003DCC85 /* AboutErrorHandling.m */,
 			);
 			path = "Objective-C-KoansTests";
 			sourceTree = "<group>";
@@ -278,7 +284,9 @@
 				1E06D0EB190CBC22003DCC85 /* AboutObjects.m in Sources */,
 				1E06D0E6190CB01C003DCC85 /* AboutAsserts.m in Sources */,
 				1E06D0ED190CCDCA003DCC85 /* AboutArrays.m in Sources */,
+				1E06D0F5190F5183003DCC85 /* AboutBool.m in Sources */,
 				1E06D0EF190DC82A003DCC85 /* AboutDictionaries.m in Sources */,
+				1E06D0F91911B3AC003DCC85 /* AboutErrorHandling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
