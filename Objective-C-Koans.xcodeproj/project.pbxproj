@@ -31,6 +31,7 @@
 		1E06D0FB1911D2BC003DCC85 /* AboutSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0FA1911D2BC003DCC85 /* AboutSelectors.m */; };
 		1E3431221911FF7600A2912B /* AboutInheritance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431211911FF7600A2912B /* AboutInheritance.m */; };
 		1E3431241911FF9E00A2912B /* AboutBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431231911FF9E00A2912B /* AboutBlocks.m */; };
+		1E3431261913278C00A2912B /* AboutReferenceCounting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431251913278C00A2912B /* AboutReferenceCounting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		1E06D0FA1911D2BC003DCC85 /* AboutSelectors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutSelectors.m; sourceTree = "<group>"; };
 		1E3431211911FF7600A2912B /* AboutInheritance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutInheritance.m; sourceTree = "<group>"; };
 		1E3431231911FF9E00A2912B /* AboutBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutBlocks.m; sourceTree = "<group>"; };
+		1E3431251913278C00A2912B /* AboutReferenceCounting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutReferenceCounting.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				1E06D0E5190CB01C003DCC85 /* AboutAsserts.m */,
 				1E06D0E8190CB6DA003DCC85 /* AboutNil.m */,
 				1E06D0F4190F5183003DCC85 /* AboutBool.m */,
+				1E3431251913278C00A2912B /* AboutReferenceCounting.m */,
 				1E06D0EA190CBC22003DCC85 /* AboutObjects.m */,
 				1E06D0EC190CCDCA003DCC85 /* AboutArrays.m */,
 				1E06D0EE190DC82A003DCC85 /* AboutDictionaries.m */,
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E3431261913278C00A2912B /* AboutReferenceCounting.m in Sources */,
 				1E06D0F1190DE402003DCC85 /* AboutStrings.m in Sources */,
 				1E06D0E9190CB6DA003DCC85 /* AboutNil.m in Sources */,
 				1E06D0F3190F2991003DCC85 /* AboutClasses.m in Sources */,
