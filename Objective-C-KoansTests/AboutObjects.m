@@ -69,4 +69,20 @@ static NSString * const __ = @"FILL ME IN";
     XCTAssertEqualObjects(@"123", [string description]);
 }
 
+- (void)testCopyCreatesACopyOfTheReceiver
+{
+    NSString *string = @"Original String";
+    NSString *copiedString = [string copy];
+    
+    XCTAssertEqualObjects(@"Original String", copiedString);
+}
+
+- (void)testMutableCopyCreatesAMutableCopyOfTheReceiver
+{
+    NSString *string = @"Original String";
+    NSMutableString *copiedString = [string mutableCopy];
+    
+    XCTAssertEqualObjects(@"Original String", copiedString);
+}
+
 @end
