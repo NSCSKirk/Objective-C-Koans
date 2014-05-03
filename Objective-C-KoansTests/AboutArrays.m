@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
 
 @interface AboutArrays : XCTestCase
 
@@ -18,59 +19,57 @@
 {
     NSArray *array = [NSArray array];
     
-    XCTAssertTrue([array isKindOfClass:[NSArray class]]);
-    XCTAssertEqual(0, [array count]);
+    XCTAssertEqual(____, [array isKindOfClass:[NSArray class]]);
+    XCTAssertEqual(_____, [array count]);
 }
 
 - (void)testArrayEquality
 {
     NSArray *array = @[@"Dog", @"Cat"];
-    NSArray *expected = @[@"Dog", @"Cat"];
+    NSArray *expected = array;
     
-    XCTAssertTrue([array isEqualToArray:expected]);
-    
-    expected = @[@"Dog", @"Cat"];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqual(____, [array isEqualToArray:expected]);
+    XCTAssertEqualObjects((__), array);
 }
 
 - (void)testArrayLiterals
 {
     NSArray *array = [NSArray array];
     NSArray *literal = @[];
-    XCTAssertEqualObjects(literal, array);
+    XCTAssertEqualObjects(__, array);
     
     array = [NSArray arrayWithObject:@"1"];
     literal = @[@"1"];
-    XCTAssertEqualObjects(literal, array);
+    XCTAssertEqualObjects(__, array);
     
     array = [NSArray arrayWithObjects:@"1", @"2", nil];
     literal = @[@"1", @"2"];
-    XCTAssertEqualObjects(literal, array);
+    XCTAssertEqualObjects(__, array);
 }
 
 - (void)testAccessingArrayElements
 {
     NSArray *array = @[@"Peanut", @"Butter", @"And", @"Jelly"];
     
-    XCTAssertEqualObjects(@"Peanut", array[0]);
-    XCTAssertEqualObjects(@"Peanut", [array firstObject]);
-    XCTAssertEqualObjects(@"Jelly", array[3]);
-    XCTAssertEqualObjects(@"Jelly", [array lastObject]);
+    XCTAssertEqualObjects(__, array[0]);
+    XCTAssertEqualObjects(__, [array firstObject]);
+    XCTAssertEqualObjects(__, array[3]);
+    XCTAssertEqualObjects(__, [array lastObject]);
 }
 
 - (void)testGettingIndexOfArrayObjects
 {
     NSArray *array = @[@"Peanut", @"Butter", @"And", @"Jelly"];
     
-    XCTAssertEqual(0, [array indexOfObject:@"Peanut"]);
-    XCTAssertEqual(NSNotFound, [array indexOfObject:@"Crackers"]);
-    XCTAssertEqual(1, [array indexOfObject:@"Butter" inRange:NSMakeRange(0, 2)]);
-    XCTAssertEqual(NSNotFound, [array indexOfObject:@"Butter" inRange:NSMakeRange(0, 1)]);
+    XCTAssertEqual(_____, [array indexOfObject:@"Peanut"]);
+    XCTAssertEqual(_____, [array indexOfObject:@"Crackers"]);
+    XCTAssertEqual(_____, [array indexOfObject:@"Butter" inRange:NSMakeRange(0, 2)]);
+    XCTAssertEqual(_____, [array indexOfObject:@"Butter" inRange:NSMakeRange(0, 1)]);
     
     UILabel *label = [[UILabel alloc] init];
     array = @[label];
     
-    XCTAssertEqual(0, [array indexOfObjectIdenticalTo:label]);
+    XCTAssertEqual(_____, [array indexOfObjectIdenticalTo:label]);
 }
 
 - (void)testSlicingArraysWithRanges
@@ -78,34 +77,27 @@
     NSArray *array = @[@"Peanut", @"Butter", @"And", @"Jelly"];
     
     NSArray *actual = [array subarrayWithRange:NSMakeRange(0, 1)];
-    NSArray *expected = @[@"Peanut"];
-    XCTAssertEqualObjects(expected, actual);
+    XCTAssertEqualObjects((__), actual);
     
     actual = [array subarrayWithRange:NSMakeRange(0, 2)];
-    expected = @[@"Peanut", @"Butter"];
-    XCTAssertEqualObjects(expected, actual);
+    XCTAssertEqualObjects((__), actual);
     
     actual = [array subarrayWithRange:NSMakeRange(2, 2)];
-    expected = @[@"And", @"Jelly"];
-    XCTAssertEqualObjects(actual, expected);
+    XCTAssertEqualObjects((__), actual);
     
     actual = [array subarrayWithRange:NSMakeRange(3, 0)];
-    expected = @[];
-    XCTAssertEqualObjects(actual, expected);
+    XCTAssertEqualObjects((__), actual);
 }
 
 - (void)testCreatingNewArraysFromExistingArrays
 {
     NSArray *array = @[@"Peanut"];
-    NSArray *actual;
     
     array = [array arrayByAddingObject:@"Butter"];
-    actual = @[@"Peanut", @"Butter"];
-    XCTAssertEqualObjects(actual, array);
+    XCTAssertEqualObjects((__), array);
     
     array = [array arrayByAddingObjectsFromArray:@[@"And", @"Jelly"]];
-    actual = @[@"Peanut", @"Butter", @"And", @"Jelly"];
-    XCTAssertEqualObjects(actual, array);
+    XCTAssertEqualObjects((__), array);
 }
 
 - (void)testJoiningComponentsInArray
@@ -113,21 +105,21 @@
     NSArray *array = @[@"Peanut", @"Butter", @"And", @"Jelly"];
     NSString *actual = [array componentsJoinedByString:@" "];
     
-    XCTAssertEqualObjects(@"Peanut Butter And Jelly", actual);
+    XCTAssertEqualObjects(__, actual);
     
     actual = [array componentsJoinedByString:nil];
-    XCTAssertEqualObjects(@"PeanutButterAndJelly", actual);
+    XCTAssertEqualObjects(__, actual);
     
     array = @[];
     actual = [array componentsJoinedByString:@" "];
-    XCTAssertEqualObjects(@"", actual);
+    XCTAssertEqualObjects(__, actual);
 }
 
 - (void)testMutableArraysAreSubclassesofNSArray
 {
     NSMutableArray *array = [NSMutableArray array];
     
-    XCTAssertTrue([array isKindOfClass:[NSArray class]]);
+    XCTAssertEqual(____, [array isKindOfClass:[NSArray class]]);
 }
 
 - (void)testAddingToMutableArrays
@@ -135,20 +127,16 @@
     NSMutableArray *array = [NSMutableArray array];
 
     [array addObject:@"Peanut"];
-    NSArray *expected = @[@"Peanut"];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqualObjects((__), array);
     
     [array addObjectsFromArray:@[@"Butter", @"And"]];
-    expected = @[@"Peanut", @"Butter", @"And"];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqualObjects((__), array);
     
     [array insertObject:@"Jelly" atIndex:3];
-    expected = @[@"Peanut", @"Butter", @"And", @"Jelly"];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqualObjects((__), array);
     
     array[3] = @"Crackers";
-    expected = @[@"Peanut", @"Butter", @"And", @"Crackers"];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqualObjects((__), array);
 }
 
 - (void)testRemovingFromMutableArrays
@@ -156,20 +144,16 @@
     NSMutableArray *array = [NSMutableArray arrayWithObjects:@"Peanut", @"Butter", @"And", @"Jelly", nil];
     
     [array removeObject:@"Peanut"];
-    NSArray *expected = @[@"Butter", @"And", @"Jelly"];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqualObjects((__), array);
     
     [array removeObjectAtIndex:1];
-    expected = @[@"Butter", @"Jelly"];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqualObjects((__), array);
     
     [array removeLastObject];
-    expected = @[@"Butter"];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqualObjects((__), array);
     
     [array removeAllObjects];
-    expected = @[];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqualObjects((__), array);
 }
 
 - (void)testReplacingInMutableArrays
@@ -177,12 +161,10 @@
     NSMutableArray *array = [NSMutableArray arrayWithObjects:@"Peanut", @"Butter", @"And", @"Jelly", nil];
     
     [array replaceObjectAtIndex:3 withObject:@"Crackers"];
-    NSArray *expected = @[@"Peanut", @"Butter", @"And", @"Crackers"];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqualObjects((__), array);
     
     [array exchangeObjectAtIndex:1 withObjectAtIndex:3];
-    expected = @[@"Peanut", @"Crackers", @"And", @"Butter"];
-    XCTAssertEqualObjects(expected, array);
+    XCTAssertEqualObjects((__), array);
 }
 
 @end

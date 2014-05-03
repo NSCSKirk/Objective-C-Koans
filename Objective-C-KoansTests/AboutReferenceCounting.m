@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
 
 @interface AboutReferenceCounting : XCTestCase
 
@@ -24,7 +25,7 @@
     NSString *string = [[NSString alloc] initWithString:@"Owned String"];
     
     //Reference count is 1 since we used alloc/init
-    XCTAssertEqualObjects(@"Owned String", string);
+    XCTAssertEqualObjects(__, string);
     
     //Release decrements the reference count to 0 triggering deallocation
     [string release];
@@ -40,7 +41,7 @@
     //just stick with alloc/init.
     NSString *string = [NSString new];
     
-    XCTAssertEqualObjects(@"", string);
+    XCTAssertEqualObjects(__, string);
 }
 
 - (void)testRetainIncreasesReferenceCount
@@ -54,7 +55,7 @@
     //property marked with 'retain' (or 'strong' in ARC)
     [string retain];
     
-    XCTAssertEqualObjects(@"Retained String", string);
+    XCTAssertEqualObjects(__, string);
     
     //Release the object to prevent a leak
     [string release];
@@ -70,7 +71,7 @@
     //retain to prevent deallocation.
     NSString *string = [NSString stringWithFormat:@"%@ %@", @"Autoreleased", @"String"];
     
-    XCTAssertEqualObjects(@"Autoreleased String", string);
+    XCTAssertEqualObjects(__, string);
 }
 
 @end

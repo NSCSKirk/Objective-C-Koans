@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
 
 @protocol TestDelegate <NSObject>
 - (void)protocolMethod;
@@ -81,7 +82,7 @@
 
 - (void)testProtocolsDefineASetOfMethodsButNotTheImplementation
 {
-    XCTAssertTrue([ClassImplementingProtocol conformsToProtocol:@protocol(TestDelegate)]);
+    XCTAssertEqual(____, [ClassImplementingProtocol conformsToProtocol:@protocol(TestDelegate)]);
 }
 
 - (void)testClassesCanHaveDelegatesThatConformToAProtocol
@@ -95,7 +96,7 @@
     //information.
     classWithDelegate.delegate = classImplementingProtocol;
     
-    XCTAssertEqualObjects(classImplementingProtocol, classWithDelegate.delegate);
+    XCTAssertEqualObjects(__, classWithDelegate.delegate);
 }
 
 - (void)testDelegatesAreUsedWithProtocolsToInform
@@ -106,7 +107,7 @@
     classWithDelegate.delegate = classImplementingProtocol;
     [classWithDelegate callProtocolMethod];
     
-    XCTAssertEqual(YES, classImplementingProtocol.methodCalled);
+    XCTAssertEqual(____, classImplementingProtocol.methodCalled);
 }
 
 - (void)testDelegatesAreAlsoUsedToAskForInformation
@@ -117,7 +118,7 @@
     classWithDelegate.delegate = classImplementingProtocol;
     NSString *string = [classWithDelegate.delegate protocolMethodWithArgument:@"Protocol Argument"];
     
-    XCTAssertEqualObjects(@"Protocol Argument", string);
+    XCTAssertEqualObjects(__, string);
 }
 
 - (void)testProtocolsShowIntentWithoutExposingTheClass
@@ -129,8 +130,8 @@
     //had a custom class in our library that we didnt want to full expose, we could
     //extract part of the class into a protocol then return type 'id<{Protocol}>' to
     //only expose the methods defined in the protocol, rather than the whole class.
-    XCTAssertTrue([protocolClass respondsToSelector:@selector(protocolMethod)]);
-    XCTAssertTrue([protocolClass respondsToSelector:@selector(protocolMethodWithArgument:)]);
+    XCTAssertEqual(____, [protocolClass respondsToSelector:@selector(protocolMethod)]);
+    XCTAssertEqual(____, [protocolClass respondsToSelector:@selector(protocolMethodWithArgument:)]);
 }
 
 @end

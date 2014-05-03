@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
 
 @interface AboutErrorHandling : XCTestCase
 
@@ -16,14 +17,7 @@
 
 - (void)testExceptionsAreUsedForFatalErrors
 {
-    @try
-    {
-        [NSException raise:@"An Exception" format:nil];
-    }
-    @catch (NSException *exception)
-    {
-        XCTAssertEqualObjects(@"An Exception", exception.name);
-    }
+    XCTAssertThrowsSpecificNamed([NSException raise:@"An Exception" format:nil], NSException, __);
 }
 
 - (void)testThrowCanAlsoRaiseAnException
@@ -34,7 +28,7 @@
     }
     @catch (NSException *exception)
     {
-        XCTAssertEqualObjects(@"Exception!", exception.name);
+        XCTAssertEqualObjects(__, exception.name);
     }
 }
 
@@ -44,7 +38,7 @@
     
     [self returnsErrorMethod:&error];
     
-    XCTAssertEqualObjects(@"TestErrorDomain", [error domain]);
+    XCTAssertEqualObjects(__, [error domain]);
 }
 
 - (void)testMostMethodsThatOutputNSErrorsReturnABoolToIndicateSuccess
@@ -52,12 +46,12 @@
     NSError *error = nil;
     BOOL success = [self returnsErrorMethod:&error];
     
-    XCTAssertEqual(NO, success);
+    XCTAssertEqual(_____, success);
 }
 
 - (void)testNSErrorDomainCannotBeNil
 {
-    XCTAssertThrowsSpecificNamed([NSError errorWithDomain:nil code:1 userInfo:nil], NSException, @"NSInvalidArgumentException");
+    XCTAssertThrowsSpecificNamed([NSError errorWithDomain:nil code:1 userInfo:nil], NSException, __);
 }
 
 - (void)testNSErrorsHaveAUserInfoDictionaryForAdditionalInformation
@@ -65,7 +59,7 @@
     NSError *error = nil;
     [self returnsErrorMethod:&error];
     
-    XCTAssertEqualObjects(@"Localized Error Description", [error localizedDescription]);
+    XCTAssertEqualObjects(__, [error localizedDescription]);
 }
 
 - (void)testNSErrorCanAlsoPassBackAnUnderlyingErrorInsideUserInfo
@@ -76,7 +70,7 @@
     NSDictionary *userInfo = [error userInfo];
     NSError *underlyingError = userInfo[NSUnderlyingErrorKey];
     
-    XCTAssertEqualObjects(@"UnderlyingErrorDomain", [underlyingError domain]);
+    XCTAssertEqualObjects(__, [underlyingError domain]);
 }
 
 - (BOOL)returnsErrorMethod:(NSError **)error
