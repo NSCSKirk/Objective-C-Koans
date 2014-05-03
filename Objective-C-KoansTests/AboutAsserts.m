@@ -26,35 +26,32 @@
 
 - (void)testAssertEquality
 {
-    NSInteger expectedValue = 2;
     NSInteger actualValue = 1 + 1;
     
-    XCTAssert(expectedValue == actualValue);
+    XCTAssert(2 == actualValue);
 }
 
 - (void)testABetterWayOfAssertingEquality
 {
-    NSInteger expectedValue = 2;
     NSInteger actualValue = 1 + 1;
     
-    XCTAssertEqual(expectedValue, actualValue);
+    XCTAssertEqual(2, actualValue);
 }
 
 - (void)testAssertObjectEquality
 {
-    NSString *objectOne = @"Object";
-    NSString *objectTwo = objectOne;
+    NSString *object = @"Object";
     
     //XCTAssertEqualObjects calls 'isEqual:' using the two passed objects
     //and should be used when comparing Objective-c objects in tests
-    XCTAssertEqualObjects(objectOne, objectTwo);
+    XCTAssertEqualObjects(@"Object", object);
 }
 
 - (void)testAssertSpeificExceptionThrown
 {
     NSException *exception = [NSException exceptionWithName:NSInternalInconsistencyException reason:@"" userInfo:nil];
     
-    XCTAssertThrowsSpecificNamed([exception raise], NSException, NSInternalInconsistencyException);
+    XCTAssertThrowsSpecificNamed([exception raise], NSException, @"NSInternalInconsistencyException");
 }
 
 - (void)testFillInValues

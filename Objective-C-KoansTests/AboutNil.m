@@ -8,9 +8,6 @@
 
 #import <XCTest/XCTest.h>
 
-
-static NSString * const __ = @"FILL ME IN";
-
 @interface AboutNil : XCTestCase
 
 @end

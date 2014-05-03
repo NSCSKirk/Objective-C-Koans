@@ -24,13 +24,13 @@ static NSString * const __ = @"FILL ME IN";
     //will only use the '*' when declaring the variable.
     NSString *string = @"string";
     
-    XCTAssertNotNil(string);
+    XCTAssertEqualObjects(@"string", string);
     
     //The exception is when declaring a variable with 'id' since it
     //implies the pointer.
     id anotherString = @"anotherString";
     
-    XCTAssertNotNil(anotherString);
+    XCTAssertEqualObjects(@"anotherString", anotherString);
 }
 
 - (void)testObjectPointerEquality
@@ -57,9 +57,11 @@ static NSString * const __ = @"FILL ME IN";
     
     //Tests if the receiver is an instance of the class
     XCTAssertTrue([label isMemberOfClass:[UILabel class]]);
+    XCTAssertEqual(YES, [label isMemberOfClass:[UILabel class]]);
     
     //Tests if the receiver is an instance or descendant of the class
     XCTAssertTrue([label isKindOfClass:[NSObject class]]);
+    XCTAssertEqual(YES, [label isKindOfClass:[NSObject class]]);
 }
 
 - (void)testObjectDescription
