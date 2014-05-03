@@ -79,6 +79,7 @@
 		1E3431251913278C00A2912B /* AboutReferenceCounting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutReferenceCounting.m; sourceTree = "<group>"; };
 		1E3431271914742800A2912B /* AboutProtocols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutProtocols.m; sourceTree = "<group>"; };
 		1E34312919154A0E00A2912B /* AboutForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutForwarding.m; sourceTree = "<group>"; };
+		1E34312B191577D000A2912B /* KoansDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KoansDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +164,7 @@
 				1E06D0D6190CAF67003DCC85 /* Supporting Files */,
 				1E06D0DB190CAF67003DCC85 /* Objective_C_KoansTests.m */,
 				1E06D0E7190CB0FC003DCC85 /* PrefixHeader.pch */,
+				1E34312B191577D000A2912B /* KoansDefines.h */,
 				1E06D0E5190CB01C003DCC85 /* AboutAsserts.m */,
 				1E06D0E8190CB6DA003DCC85 /* AboutNil.m */,
 				1E06D0F4190F5183003DCC85 /* AboutBool.m */,

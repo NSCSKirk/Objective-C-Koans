@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
 
 @interface AboutAsserts : XCTestCase
 
@@ -16,50 +17,47 @@
 
 - (void)testAssertTruth
 {
-    XCTAssert(YES);
+    XCTAssert(___);
 }
 
 - (void)testAssertTruthWithMessage
 {
-    XCTAssert(YES, @"This should be YES -- please fix this");
+    XCTAssert(___, @"This should be YES -- please fix this");
 }
 
 - (void)testAssertEquality
 {
-    NSInteger expectedValue = 2;
     NSInteger actualValue = 1 + 1;
     
-    XCTAssert(expectedValue == actualValue);
+    XCTAssert(__ == actualValue);
 }
 
 - (void)testABetterWayOfAssertingEquality
 {
-    NSInteger expectedValue = 2;
     NSInteger actualValue = 1 + 1;
     
-    XCTAssertEqual(expectedValue, actualValue);
+    XCTAssertEqual(__, actualValue);
 }
 
 - (void)testAssertObjectEquality
 {
-    NSString *objectOne = @"Object";
-    NSString *objectTwo = objectOne;
+    NSString *object = @"Object";
     
     //XCTAssertEqualObjects calls 'isEqual:' using the two passed objects
     //and should be used when comparing Objective-c objects in tests
-    XCTAssertEqualObjects(objectOne, objectTwo);
+    XCTAssertEqualObjects(__, object);
 }
 
 - (void)testAssertSpeificExceptionThrown
 {
     NSException *exception = [NSException exceptionWithName:NSInternalInconsistencyException reason:@"" userInfo:nil];
     
-    XCTAssertThrowsSpecificNamed([exception raise], NSException, NSInternalInconsistencyException);
+    XCTAssertThrowsSpecificNamed([exception raise], NSException, __);
 }
 
 - (void)testFillInValues
 {
-    XCTAssertEqual(2, 1 + 1);
+    XCTAssertEqual(__, 1 + 1);
 }
 
 @end
