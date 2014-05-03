@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
 
 @interface AboutStrings : XCTestCase
 
@@ -18,22 +19,22 @@
 {
     NSString *string = @"Example String";
     
-    XCTAssertTrue([string isKindOfClass:[NSString class]]);
+    XCTAssertEqual(____, [string isKindOfClass:[NSString class]]);
 }
 
 - (void)testGettingStringLength
 {
     NSString *string = @"Example String";
     
-    XCTAssertEqual(14, [string length]);
+    XCTAssertEqual(_____, [string length]);
 }
 
 - (void)testGettingCharactersFromString
 {
     NSString *string = @"Example String";
     
-    XCTAssertEqual('E', [string characterAtIndex:0]);
-    XCTAssertEqual('t', [string characterAtIndex:9]);
+    XCTAssertEqual(_____, [string characterAtIndex:0]);
+    XCTAssertEqual(_____, [string characterAtIndex:9]);
 }
 
 - (void)testGettingSubstringFromString
@@ -41,25 +42,25 @@
     NSString *string = @"Example String";
     
     NSString *actual = [string substringToIndex:7];
-    XCTAssertEqualObjects(@"Example", actual);
+    XCTAssertEqualObjects(__, actual);
     
     actual = [string substringFromIndex:7];
-    XCTAssertEqualObjects(@" String", actual);
+    XCTAssertEqualObjects(__, actual);
     
     actual = [string substringWithRange:NSMakeRange(4, 6)];
-    XCTAssertEqualObjects(@"ple St", actual);
+    XCTAssertEqualObjects(__, actual);
 }
 
 - (void)testFormattingString
 {
     NSString *string = [NSString stringWithFormat:@"%@ %@", @"Example", @"String"];
     
-    XCTAssertEqualObjects(@"Example String", string);
+    XCTAssertEqualObjects(__, string);
     
     //For format strings, '%@' represents Objective-c objects, which are sent the
     //description message. Other format options are similar to printf in C
     string = [NSString stringWithFormat:@"%d %f %s", 1, 2.0f, "C-String"];
-    XCTAssertEqualObjects(@"1 2.000000 C-String", string);
+    XCTAssertEqualObjects(__, string);
 }
 
 - (void)testGettingRangeInString
@@ -69,36 +70,36 @@
     //NSRange is a C struct, not an Objective-C object
     //Notice the lack of '*' in the declaration
     NSRange range = [string rangeOfString:@"String"];
-    XCTAssertTrue(NSEqualRanges(NSMakeRange(8, 6), range));
+    XCTAssertEqual(____, NSEqualRanges(NSMakeRange(8, 6), range));
     
     //According to the documentation, checking if the range length
     //is greater than 0 is the proper way to determine if the
     //string's range was found.
-    XCTAssertTrue(range.length > 0);
+    XCTAssertEqual(____, range.length > 0);
     
     range = [string rangeOfString:@"NotInString"];
-    XCTAssertTrue(range.length == 0);
+    XCTAssertEqual(____, range.length == 0);
 }
 
 - (void)testIfStringHasPrefixOrSuffix
 {
     NSString *string = @"Example String";
     
-    XCTAssertTrue([string hasPrefix:@"Example"]);
-    XCTAssertTrue([string hasSuffix:@"String"]);
+    XCTAssertEqual(____, [string hasPrefix:@"Example"]);
+    XCTAssertEqual(____, [string hasSuffix:@"String"]);
 }
 
 - (void)testConvertingStringToOtherValues
 {
     NSString *string = @"100";
     
-    XCTAssertEqual(100, [string intValue]);
-    XCTAssertEqual(100, [string integerValue]);
-    XCTAssertEqual(100, [string doubleValue]);
-    XCTAssertEqual(100, [string floatValue]);
+    XCTAssertEqual(_____, [string intValue]);
+    XCTAssertEqual(_____, [string integerValue]);
+    XCTAssertEqual(_____, [string doubleValue]);
+    XCTAssertEqual(_____, [string floatValue]);
     
     string = @"YES";
-    XCTAssertEqual(YES, [string boolValue]);
+    XCTAssertEqual(____, [string boolValue]);
 }
 
 - (void)testSeparatingItemsInString
@@ -106,25 +107,23 @@
     NSString *string = @"This is an Example String";
     
     NSArray *components = [string componentsSeparatedByString:@" "];
-    NSArray *expected = @[@"This", @"is", @"an", @"Example", @"String"];
-    XCTAssertEqualObjects(expected, components);
+    XCTAssertEqualObjects((__), components);
     
     string = @"This,is an,Example String";
     NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@", "];
     components = [string componentsSeparatedByCharactersInSet:characterSet];
-    expected = @[@"This", @"is", @"an", @"Example", @"String"];
-    XCTAssertEqualObjects(expected, components);
+    XCTAssertEqualObjects((__), components);
 }
 
 - (void)testChangingStringCase
 {
     NSString *string = @"Example String";
     
-    XCTAssertEqualObjects(@"EXAMPLE STRING", [string uppercaseString]);
-    XCTAssertEqualObjects(@"example string", [string lowercaseString]);
+    XCTAssertEqualObjects(__, [string uppercaseString]);
+    XCTAssertEqualObjects(__, [string lowercaseString]);
     
     string = @"example string";
-    XCTAssertEqualObjects(@"Example String", [string capitalizedString]);
+    XCTAssertEqualObjects(__, [string capitalizedString]);
 }
 
 - (void)testTrimmingString
@@ -132,7 +131,7 @@
     NSString *string = @"    Example String    ";
     
     NSCharacterSet *characterSet = [NSCharacterSet whitespaceCharacterSet];
-    XCTAssertEqualObjects(@"Example String", [string stringByTrimmingCharactersInSet:characterSet]);
+    XCTAssertEqualObjects(__, [string stringByTrimmingCharactersInSet:characterSet]);
 }
 
 - (void)testPaddingString
@@ -140,7 +139,7 @@
     NSString *string = @"Example String";
     
     NSString *actual = [string stringByPaddingToLength:20 withString:@" " startingAtIndex:0];
-    XCTAssertEqualObjects(@"Example String      ", actual);
+    XCTAssertEqualObjects(__, actual);
 }
 
 - (void)testReplacingInStrings
@@ -149,7 +148,7 @@
     
     string = [string stringByReplacingOccurrencesOfString:@"Example" withString:@"Real Life"];
     
-    XCTAssertEqualObjects(@"Real Life String", string);
+    XCTAssertEqualObjects(__, string);
 }
 
 - (void)testAppendingString
@@ -158,14 +157,14 @@
     
     string = [string stringByAppendingString:@" For You"];
     
-    XCTAssertEqualObjects(@"Example String For You", string);
+    XCTAssertEqualObjects(__, string);
 }
 
 - (void)testMutableStringsAreSubclassesOfNSString
 {
     NSMutableString *string = [NSMutableString string];
     
-    XCTAssertTrue([string isKindOfClass:[NSString class]]);
+    XCTAssertEqual(____, [string isKindOfClass:[NSString class]]);
 }
 
 - (void)testMutableStringsCanBeModifiedInPlace
@@ -173,16 +172,16 @@
     NSMutableString *string = [NSMutableString string];
     
     [string appendString:@"Example"];
-    XCTAssertEqualObjects(@"Example", string);
+    XCTAssertEqualObjects(__, string);
     
     [string insertString:@" Strings" atIndex:7];
-    XCTAssertEqualObjects(@"Example Strings", string);
+    XCTAssertEqualObjects(__, string);
     
     [string deleteCharactersInRange:NSMakeRange(14, 1)];
-    XCTAssertEqualObjects(@"Example String", string);
+    XCTAssertEqualObjects(__, string);
     
     [string replaceCharactersInRange:NSMakeRange(0, 7) withString:@"Real"];
-    XCTAssertEqualObjects(@"Real String", string);
+    XCTAssertEqualObjects(__, string);
 }
 
 @end

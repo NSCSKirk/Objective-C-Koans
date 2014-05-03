@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
 
 @interface Dog : NSObject
 {
@@ -76,14 +77,14 @@
 {
     Dog *dog = [[Dog alloc] init];
     
-    XCTAssertEqualObjects(@"Dog", NSStringFromClass([dog class]));
+    XCTAssertEqualObjects(__, NSStringFromClass([dog class]));
 }
 
 - (void)testInitIsWhereVariablesShouldBeInitialized
 {
     Dog *dog = [[Dog alloc] init];
     
-    XCTAssertEqualObjects(@"Fido", dog.name);
+    XCTAssertEqualObjects(__, dog.name);
 }
 
 - (void)testPropertiesGenerateGettersAndSetters
@@ -100,10 +101,10 @@
     //Generates this instance variable: _countryCode
     //
     dog.furColor = [UIColor blackColor];
-    XCTAssertEqualObjects(dog.furColor, [UIColor blackColor]);
+    XCTAssertEqualObjects(__, [UIColor blackColor]);
     
     UIColor *color = dog.furColor;
-    XCTAssertEqualObjects(color, [UIColor blackColor]);
+    XCTAssertEqualObjects(__, [UIColor blackColor]);
 }
 
 - (void)testClassesCanHaveStrongProperties
@@ -116,7 +117,7 @@
     //property will be retained.
     dog.furColor = [UIColor blackColor];
     
-    XCTAssertEqualObjects(dog.furColor, [UIColor blackColor]);
+    XCTAssertEqualObjects(__, [UIColor blackColor]);
 }
 
 - (void)testClassesCanHaveWeakProperties
@@ -130,7 +131,7 @@
     //to one another.
     dog.delegate = self;
     
-    XCTAssertEqualObjects(dog.delegate, self);
+    XCTAssertEqualObjects(__, self);
 }
 
 - (void)testClassesCanHaveAssignProperties
@@ -141,7 +142,7 @@
     //int, float, and double.
     dog.tagNumber = 6;
     
-    XCTAssertEqual(dog.tagNumber, 6);
+    XCTAssertEqual(_____, 6);
 }
 
 - (void)testReadOnlyWillOnlyCreateAGetter
@@ -152,15 +153,15 @@
     //setter method.
     [dog setValue:@4 forKeyPath:@"age"];
     
-    XCTAssertEqualObjects(@4, dog.age);
+    XCTAssertEqualObjects(__, dog.age);
 }
 
 - (void)testGeneratedPropertyGettersAndSettersCanBeOveridden
 {
     Dog *dog = [[Dog alloc] init];
     
-    XCTAssertEqualObjects([UIColor blueColor], dog.eyeColor);
-    XCTAssertThrows([dog setEyeColor:[UIColor brownColor]]);
+    XCTAssertEqualObjects(__, dog.eyeColor);
+    XCTAssertThrowsSpecificNamed([dog setEyeColor:[UIColor brownColor]], NSException, __);
 }
 
 - (void)testInstanceVariablesCanBeSetAndRetrievedWithCustomMethods
@@ -169,14 +170,14 @@
     
     [dog setInstanceString:@"Blue Buffalo"];
     
-    XCTAssertEqualObjects(@"Blue Buffalo", [dog instanceString]);
+    XCTAssertEqualObjects(__, [dog instanceString]);
 }
 
 - (void)testSelfRefersToCurrentObject
 {
     Dog *dog = [[Dog alloc] init];
     
-    XCTAssertEqualObjects(dog, [dog myself]);
+    XCTAssertEqualObjects(__, [dog myself]);
 }
 
 @end

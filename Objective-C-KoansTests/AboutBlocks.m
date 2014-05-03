@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
 
 @interface AboutBlocks : XCTestCase
 @property (nonatomic, copy) NSString *result;
@@ -22,7 +23,7 @@
 - (void)testBlocksAreStoredPiecesOfCode
 {
     void (^block)(BOOL) = ^(BOOL value){
-        XCTAssertEqual(YES, value);
+        XCTAssertEqual(____, value);
     };
     
     block(YES);
@@ -33,7 +34,7 @@
     NSString *string = @"A String";
     
     void (^block)(void) = ^{
-        XCTAssertEqualObjects(@"A String", string);
+        XCTAssertEqualObjects(__, string);
     };
     
     block();
@@ -45,7 +46,7 @@
     
     void (^block)(void) = ^{
         number = 5;
-        XCTAssertEqual(5, number);
+        XCTAssertEqual(_____, number);
     };
     
     block();
@@ -59,13 +60,13 @@
     
     BOOL result = block();
     
-    XCTAssertEqual(YES, result);
+    XCTAssertEqual(____, result);
 }
 
 - (void)testBlockCanBePassedAsParameters
 {
     [self methodAcceptingBlock:^(NSString *string) {
-        XCTAssertEqualObjects(@"Block String", string);
+        XCTAssertEqualObjects(__, string);
     }];
 }
 
@@ -93,7 +94,7 @@
         self.result = @"String Result";
     }];
     
-    XCTAssertEqualObjects(@"String Result", self.result);
+    XCTAssertEqualObjects(__, self.result);
 }
 
 - (void)testAvoidStringReferenceCyclesWithBlocksAndSelfByUSingWeakReferences
@@ -103,7 +104,7 @@
         weakSelf.result = @"Weak String Result";
     }];
     
-    XCTAssertEqualObjects(@"Weak String Result", self.result);
+    XCTAssertEqualObjects(__, self.result);
 }
 
 @end

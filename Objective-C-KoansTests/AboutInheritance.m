@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
 
 @interface Cat : NSObject
 - (NSString *)meow;
@@ -52,7 +53,7 @@
 {
     UILabel *label = [[UILabel alloc] init];
     
-    XCTAssertEqualObjects(@"UIView", NSStringFromClass(label.superclass));
+    XCTAssertEqualObjects(__, NSStringFromClass(label.superclass));
 }
 
 - (void)testSubclassesCanOverrideSuperClassMethods
@@ -60,15 +61,15 @@
     Cat *cat = [[Cat alloc] init];
     Tabby *tabby = [[Tabby alloc] init];
     
-    XCTAssertEqualObjects(@"Cat Meow", [cat meow]);
-    XCTAssertEqualObjects(@"Tabby Says Meow!", [tabby meow]);
+    XCTAssertEqualObjects(__, [cat meow]);
+    XCTAssertEqualObjects(__, [tabby meow]);
 }
 
 - (void)testSubclassesCanInvokeParentThroughSuper
 {
     Tabby *tabby = [[Tabby alloc] init];
     
-    XCTAssertEqualObjects(@"Cat Meow - Tabby", [tabby specialMeow]);
+    XCTAssertEqualObjects(__, [tabby specialMeow]);
 }
 
 - (void)testSubclassesCanAddNewBehavior
@@ -79,17 +80,17 @@
     
     [mutableString appendString:@", Now Mutable!"];
     
-    XCTAssertEqualObjects(@"Immutable String, Now Mutable!", mutableString);
-    XCTAssertThrowsSpecificNamed([immutableString appendString:@", Now Mutable!"], NSException, @"NSInvalidArgumentException");
+    XCTAssertEqualObjects(__, mutableString);
+    XCTAssertThrowsSpecificNamed([immutableString appendString:@", Now Mutable!"], NSException, __);
 }
 
 - (void)testMostObjectsHaveNSObjectAsTheirRoot
 {
-    XCTAssertTrue([NSString isSubclassOfClass:[NSObject class]]);
-    XCTAssertTrue([NSMutableString isSubclassOfClass:[NSObject class]]);
-    XCTAssertTrue([NSArray isSubclassOfClass:[NSObject class]]);
-    XCTAssertTrue([NSDictionary isSubclassOfClass:[NSObject class]]);
-    XCTAssertTrue([NSError isSubclassOfClass:[NSObject class]]);
+    XCTAssertEqual(____, [NSString isSubclassOfClass:[NSObject class]]);
+    XCTAssertEqual(____, [NSMutableString isSubclassOfClass:[NSObject class]]);
+    XCTAssertEqual(____, [NSArray isSubclassOfClass:[NSObject class]]);
+    XCTAssertEqual(____, [NSDictionary isSubclassOfClass:[NSObject class]]);
+    XCTAssertEqual(____, [NSError isSubclassOfClass:[NSObject class]]);
 }
 
 - (void)testNSObjectImplementsManyCommonlyUsedMethods
@@ -102,30 +103,30 @@
     //methods implemented by NSObject subclasses.
     NSObject *object = [[NSObject alloc] init];
     
-    XCTAssertTrue([object respondsToSelector:@selector(respondsToSelector:)]);
-    XCTAssertTrue([object respondsToSelector:@selector(isKindOfClass:)]);
-    XCTAssertTrue([object respondsToSelector:@selector(isMemberOfClass:)]);
-    XCTAssertTrue([object respondsToSelector:@selector(conformsToProtocol:)]);
-    XCTAssertTrue([object respondsToSelector:@selector(description)]);
-    XCTAssertTrue([object respondsToSelector:@selector(class)]);
-    XCTAssertTrue([object respondsToSelector:@selector(superclass)]);
+    XCTAssertEqual(____, [object respondsToSelector:@selector(respondsToSelector:)]);
+    XCTAssertEqual(____, [object respondsToSelector:@selector(isKindOfClass:)]);
+    XCTAssertEqual(____, [object respondsToSelector:@selector(isMemberOfClass:)]);
+    XCTAssertEqual(____, [object respondsToSelector:@selector(conformsToProtocol:)]);
+    XCTAssertEqual(____, [object respondsToSelector:@selector(description)]);
+    XCTAssertEqual(____, [object respondsToSelector:@selector(class)]);
+    XCTAssertEqual(____, [object respondsToSelector:@selector(superclass)]);
 }
 
 -(void)testTheseMethodsAreCarriedThroughNSObjectSubclasses
 {
     NSString *string = [[NSString alloc] init];
     
-    XCTAssertTrue([string respondsToSelector:@selector(respondsToSelector:)]);
-    XCTAssertTrue([string respondsToSelector:@selector(conformsToProtocol:)]);
-    XCTAssertTrue([string respondsToSelector:@selector(class)]);
-    XCTAssertTrue([string respondsToSelector:@selector(superclass)]);
+    XCTAssertEqual(____, [string respondsToSelector:@selector(respondsToSelector:)]);
+    XCTAssertEqual(____, [string respondsToSelector:@selector(conformsToProtocol:)]);
+    XCTAssertEqual(____, [string respondsToSelector:@selector(class)]);
+    XCTAssertEqual(____, [string respondsToSelector:@selector(superclass)]);
 }
 
 - (void)testAnyObjectWithNSObjectAsItsRootConfrormsToTheNSObjectProtocol
 {
     NSString *string = @"Literal String";
     
-    XCTAssertTrue([string conformsToProtocol:@protocol(NSObject)]);
+    XCTAssertEqual(____, [string conformsToProtocol:@protocol(NSObject)]);
 }
 
 @end

@@ -13,5 +13,6 @@
 #define __ @"FILL ME IN"
 #define ___ nil
 #define ____ NO
+#define _____ -1
 
 #endif

@@ -17,16 +17,17 @@ static NSString * const __ = @"FILL ME IN";
 
 @implementation AboutNil
 
+//Need a better way to demonstrate this?
 - (void)testCallingMethodsOnNilDoesNotRaiseException
 {
-    id object = nil;
+    NSString *string = nil;
     
-    XCTAssertNoThrow([object stringValue]);
+    XCTAssertNoThrow([string intValue]);
 }
 
 - (void)testNilEvaluatesToFalse
 {
-    XCTAssertFalse(nil);
+    XCTAssertFalse(__);
 }
 
 - (void)testNilAndNULLHaveTheSameValue
@@ -34,7 +35,7 @@ static NSString * const __ = @"FILL ME IN";
     //Nil and NULL evaluate to the same value, but NULL
     //should only be used in C code, whereas nil should
     //be used in Objective-c code
-    XCTAssertEqualObjects(nil, NULL);
+    XCTAssertEqualObjects(__, NULL);
 }
 
 @end

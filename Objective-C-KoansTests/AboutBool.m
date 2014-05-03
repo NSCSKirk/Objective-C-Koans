@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
 
 @interface AboutBool : XCTestCase
 
@@ -16,34 +17,35 @@
 
 - (void)testYESIsTreatedAsTrue
 {
-    XCTAssertTrue(YES);
+    XCTAssertTrue(____);
 }
 
 - (void)testNOIsTreatedAsFalse
 {
-    XCTAssertFalse(NO);
+    XCTAssertFalse(_____);
 }
 
 - (void)testNilIsTreatedAsFalse
 {
-    XCTAssertFalse(nil);
+    XCTAssertFalse(_____);
 }
 
 - (void)testZeroIsTreatedAsFalse
 {
-    XCTAssertFalse(0);
+    XCTAssertFalse(_____);
 }
 
 - (void)testNOIsAMacroFor0
 {
-    XCTAssertEqual(NO, 0);
+    XCTAssertEqual(_____, 0);
 }
 
 - (void)testYESIsAMacroForOne
 {
-    XCTAssertEqual(YES, 1);
+    XCTAssertEqual(_____, 1);
 }
 
+//Need a way to fail these in a elegant way
 - (void)testMostEverythingElseIsTrue
 {
     XCTAssertTrue(1);

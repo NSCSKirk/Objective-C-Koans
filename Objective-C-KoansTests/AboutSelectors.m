@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import <objc/message.h>
+#import "KoansDefines.h"
 
 @interface AboutSelectors : XCTestCase
 
@@ -25,15 +26,15 @@
     //rather than invoking performSelector: on the instance.
     NSString *loweredString = [string performSelector:@selector(lowercaseString)];
     
-    XCTAssertEqualObjects(@"a string", loweredString);
-    XCTAssertEqualObjects(@"a string", [string lowercaseString]);
+    XCTAssertEqualObjects(__, loweredString);
+    XCTAssertEqualObjects(__, [string lowercaseString]);
 }
 
 - (void)testSelectorsCanAlsoBeSentToClasses
 {
     NSString *string = [NSString string];
     
-    XCTAssertEqualObjects(@"", string);
+    XCTAssertEqualObjects(__, string);
 }
 
 - (void)testASelectorWithArgumentsIncludesColons
@@ -42,8 +43,8 @@
     NSLocale *currentLocale = [NSLocale currentLocale];
     NSString *loweredString = [string performSelector:@selector(lowercaseStringWithLocale:) withObject:currentLocale];
     
-    XCTAssertEqualObjects(@"a string", loweredString);
-    XCTAssertEqualObjects(@"a string", [string lowercaseStringWithLocale:currentLocale]);
+    XCTAssertEqualObjects(__, loweredString);
+    XCTAssertEqualObjects(__, [string lowercaseStringWithLocale:currentLocale]);
 }
 
 - (void)testTheRuntimeTranslatesSelectorsIntoMessagesAtRuntime
@@ -55,14 +56,14 @@
     //does with your code.
     string = objc_msgSend(string, @selector(lowercaseString));
     
-    XCTAssertEqualObjects(@"a string", string);
+    XCTAssertEqualObjects(__, string);
 }
 
 - (void)testPassingAnUnrecognizedSelectorRaisesAnException
 {
     id string = @"A String";
     
-    XCTAssertThrowsSpecificNamed([string objectForKey:@"Crash Time"], NSException, NSInvalidArgumentException);
+    XCTAssertThrowsSpecificNamed([string objectForKey:@"Crash Time"], NSException, __);
 }
 
 @end
