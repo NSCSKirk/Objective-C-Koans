@@ -32,6 +32,7 @@
 		1E3431221911FF7600A2912B /* AboutInheritance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431211911FF7600A2912B /* AboutInheritance.m */; };
 		1E3431241911FF9E00A2912B /* AboutBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431231911FF9E00A2912B /* AboutBlocks.m */; };
 		1E3431261913278C00A2912B /* AboutReferenceCounting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431251913278C00A2912B /* AboutReferenceCounting.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1E3431281914742800A2912B /* AboutProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431271914742800A2912B /* AboutProtocols.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		1E3431211911FF7600A2912B /* AboutInheritance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutInheritance.m; sourceTree = "<group>"; };
 		1E3431231911FF9E00A2912B /* AboutBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutBlocks.m; sourceTree = "<group>"; };
 		1E3431251913278C00A2912B /* AboutReferenceCounting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutReferenceCounting.m; sourceTree = "<group>"; };
+		1E3431271914742800A2912B /* AboutProtocols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutProtocols.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				1E06D0FA1911D2BC003DCC85 /* AboutSelectors.m */,
 				1E3431211911FF7600A2912B /* AboutInheritance.m */,
 				1E3431231911FF9E00A2912B /* AboutBlocks.m */,
+				1E3431271914742800A2912B /* AboutProtocols.m */,
 			);
 			path = "Objective-C-KoansTests";
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				1E06D0F5190F5183003DCC85 /* AboutBool.m in Sources */,
 				1E06D0EF190DC82A003DCC85 /* AboutDictionaries.m in Sources */,
 				1E06D0F91911B3AC003DCC85 /* AboutErrorHandling.m in Sources */,
+				1E3431281914742800A2912B /* AboutProtocols.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
