@@ -31,7 +31,7 @@
 		1E06D0FB1911D2BC003DCC85 /* AboutSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E06D0FA1911D2BC003DCC85 /* AboutSelectors.m */; };
 		1E3431221911FF7600A2912B /* AboutInheritance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431211911FF7600A2912B /* AboutInheritance.m */; };
 		1E3431241911FF9E00A2912B /* AboutBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431231911FF9E00A2912B /* AboutBlocks.m */; };
-		1E3431261913278C00A2912B /* AboutReferenceCounting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431251913278C00A2912B /* AboutReferenceCounting.m */; };
+		1E3431261913278C00A2912B /* AboutReferenceCounting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431251913278C00A2912B /* AboutReferenceCounting.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
