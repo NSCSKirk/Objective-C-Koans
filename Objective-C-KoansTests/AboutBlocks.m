@@ -11,6 +11,7 @@
 
 @interface AboutBlocks : XCTestCase
 @property (nonatomic, copy) NSString *result;
+@property (nonatomic, copy) BOOL (^storedBlock)(NSString *);
 @end
 
 @implementation AboutBlocks
@@ -105,6 +106,17 @@
     }];
     
     XCTAssertEqualObjects(__, self.result);
+}
+
+- (void)testWhenStoringBlocksInPropertiesUseCopy
+{
+    BOOL (^block)(NSString *) = ^BOOL(NSString *parameter) {
+        return YES;
+    };
+    
+    self.storedBlock = block;
+    
+    XCTAssertNotNil(___);
 }
 
 @end
