@@ -29,14 +29,14 @@
 {
     NSInteger actualValue = 1 + 1;
     
-    XCTAssert(__ == actualValue);
+    XCTAssert(_____ == actualValue);
 }
 
 - (void)testABetterWayOfAssertingEquality
 {
     NSInteger actualValue = 1 + 1;
     
-    XCTAssertEqual(__, actualValue);
+    XCTAssertEqual(_____, actualValue);
 }
 
 - (void)testAssertObjectEquality
@@ -57,7 +57,7 @@
 
 - (void)testFillInValues
 {
-    XCTAssertEqual(__, 1 + 1);
+    XCTAssertEqual(_____, 1 + 1);
 }
 
 @end
