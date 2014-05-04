@@ -34,6 +34,7 @@
 		1E3431261913278C00A2912B /* AboutReferenceCounting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431251913278C00A2912B /* AboutReferenceCounting.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1E3431281914742800A2912B /* AboutProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431271914742800A2912B /* AboutProtocols.m */; };
 		1E34312A19154A0E00A2912B /* AboutForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E34312919154A0E00A2912B /* AboutForwarding.m */; };
+		1E34312D191702DA00A2912B /* AboutCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E34312C191702DA00A2912B /* AboutCategories.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		1E3431271914742800A2912B /* AboutProtocols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutProtocols.m; sourceTree = "<group>"; };
 		1E34312919154A0E00A2912B /* AboutForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutForwarding.m; sourceTree = "<group>"; };
 		1E34312B191577D000A2912B /* KoansDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KoansDefines.h; sourceTree = "<group>"; };
+		1E34312C191702DA00A2912B /* AboutCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutCategories.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				1E3431231911FF9E00A2912B /* AboutBlocks.m */,
 				1E3431271914742800A2912B /* AboutProtocols.m */,
 				1E34312919154A0E00A2912B /* AboutForwarding.m */,
+				1E34312C191702DA00A2912B /* AboutCategories.m */,
 			);
 			path = "Objective-C-KoansTests";
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				1E3431261913278C00A2912B /* AboutReferenceCounting.m in Sources */,
 				1E06D0F1190DE402003DCC85 /* AboutStrings.m in Sources */,
+				1E34312D191702DA00A2912B /* AboutCategories.m in Sources */,
 				1E06D0E9190CB6DA003DCC85 /* AboutNil.m in Sources */,
 				1E06D0F3190F2991003DCC85 /* AboutClasses.m in Sources */,
 				1E06D0FB1911D2BC003DCC85 /* AboutSelectors.m in Sources */,
