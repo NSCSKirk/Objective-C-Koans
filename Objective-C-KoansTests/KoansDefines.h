@@ -14,5 +14,6 @@
 #define ___ nil
 #define ____ NO
 #define _____ -1
+#define ______ [NSException raise:@"FillMeIn" format:nil]
 
 #endif
