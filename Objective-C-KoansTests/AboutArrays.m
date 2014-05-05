@@ -47,13 +47,6 @@
     XCTAssertEqualObjects(__, array);
 }
 
-- (void)testArraysCannotContainNil
-{
-    NSMutableArray *array = [NSMutableArray array];
-    
-    XCTAssertThrowsSpecificNamed([array addObject:nil], NSException, __);
-}
-
 - (void)testAccessingArrayElements
 {
     NSArray *array = @[@"Peanut", @"Butter", @"And", @"Jelly"];
@@ -172,6 +165,13 @@
     
     [array exchangeObjectAtIndex:1 withObjectAtIndex:3];
     XCTAssertEqualObjects((__), array);
+}
+
+- (void)testArraysCannotContainNil
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    XCTAssertThrowsSpecificNamed([array addObject:nil], NSException, __);
 }
 
 @end
