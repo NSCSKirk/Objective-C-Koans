@@ -48,12 +48,12 @@
 //Need a way to fail these in a elegant way
 - (void)testMostEverythingElseIsTrue
 {
-    XCTAssertTrue(1);
-    XCTAssertTrue(@[]);
-    XCTAssertTrue(@{});
-    XCTAssertTrue("C String");
-    XCTAssertTrue(@"Objective-c String");
-    XCTAssertTrue(@"");
+    XCTAssertTrue(___); //1
+    XCTAssertTrue(___); //@[]
+    XCTAssertTrue(___); //@[]
+    XCTAssertTrue(___); //@"C String"
+    XCTAssertTrue(___); //@"Objective-C String"
+    XCTAssertTrue(___); //@""
     
 }
 
