@@ -99,4 +99,12 @@
     XCTAssertEqualObjects((__), mutableDictionary);
 }
 
+- (void)testDictionaryKeysOrValuesCannotBeNil
+{
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    
+    XCTAssertThrowsSpecificNamed([dictionary setObject:nil forKey:@"Key"], NSException, __);
+    XCTAssertThrowsSpecificNamed([dictionary setObject:@"Value" forKey:nil], NSException, __);
+}
+
 @end
