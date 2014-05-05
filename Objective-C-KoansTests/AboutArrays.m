@@ -47,6 +47,13 @@
     XCTAssertEqualObjects(__, array);
 }
 
+- (void)testArraysCannotContainNil
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    XCTAssertThrowsSpecificNamed([array addObject:nil], NSException, __);
+}
+
 - (void)testAccessingArrayElements
 {
     NSArray *array = @[@"Peanut", @"Butter", @"And", @"Jelly"];
