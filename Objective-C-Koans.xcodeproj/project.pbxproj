@@ -37,7 +37,7 @@
 		1E34312D191702DA00A2912B /* AboutCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E34312C191702DA00A2912B /* AboutCategories.m */; };
 		1E34312F1917402800A2912B /* AboutPredicates.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E34312E1917402800A2912B /* AboutPredicates.m */; };
 		1E3431311917404300A2912B /* AboutURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E3431301917404300A2912B /* AboutURLs.m */; };
-		1E343133191740CE00A2912B /* AboutNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E343132191740CE00A2912B /* AboutNotifications.m */; };
+		1E343133191740CE00A2912B /* AboutCommunicationPatterns.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E343132191740CE00A2912B /* AboutCommunicationPatterns.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,7 @@
 		1E34312C191702DA00A2912B /* AboutCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutCategories.m; sourceTree = "<group>"; };
 		1E34312E1917402800A2912B /* AboutPredicates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutPredicates.m; sourceTree = "<group>"; };
 		1E3431301917404300A2912B /* AboutURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutURLs.m; sourceTree = "<group>"; };
-		1E343132191740CE00A2912B /* AboutNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutNotifications.m; sourceTree = "<group>"; };
+		1E343132191740CE00A2912B /* AboutCommunicationPatterns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutCommunicationPatterns.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +191,7 @@
 				1E34312C191702DA00A2912B /* AboutCategories.m */,
 				1E34312E1917402800A2912B /* AboutPredicates.m */,
 				1E3431301917404300A2912B /* AboutURLs.m */,
-				1E343132191740CE00A2912B /* AboutNotifications.m */,
+				1E343132191740CE00A2912B /* AboutCommunicationPatterns.m */,
 			);
 			path = "Objective-C-KoansTests";
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E343133191740CE00A2912B /* AboutNotifications.m in Sources */,
+				1E343133191740CE00A2912B /* AboutCommunicationPatterns.m in Sources */,
 				1E3431261913278C00A2912B /* AboutReferenceCounting.m in Sources */,
 				1E06D0F1190DE402003DCC85 /* AboutStrings.m in Sources */,
 				1E34312D191702DA00A2912B /* AboutCategories.m in Sources */,
