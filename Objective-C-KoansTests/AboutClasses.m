@@ -100,11 +100,25 @@
     //This definition: @property (nonatomic, assign) int countryCode;
     //Generates this instance variable: _countryCode
     //
-    dog.furColor = [UIColor blackColor];
+    [dog setFurColor:[UIColor blackColor]];
     XCTAssertEqualObjects(__, [UIColor blackColor]);
     
-    UIColor *color = dog.furColor;
+    UIColor *color = [dog furColor];
     XCTAssertEqualObjects(__, [UIColor blackColor]);
+}
+
+- (void)testDotSyntaxCanBeUsedForProperties
+{
+    Dog *dog = [[Dog alloc] init];
+    
+    //Dot syntax should only be used for properties. It is possible to use
+    //the same syntax when used on a method with no arguments, but this
+    //should be avoided as it obscures the method as a property.
+    dog.furColor = [UIColor whiteColor];
+    XCTAssertEqualObjects(__, [UIColor whiteColor]);
+    
+    UIColor *color = dog.furColor;
+    XCTAssertEqualObjects(__, [UIColor whiteColor]);
 }
 
 - (void)testClassesCanHaveStrongProperties
