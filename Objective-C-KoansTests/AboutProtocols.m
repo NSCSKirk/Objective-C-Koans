@@ -10,8 +10,8 @@
 #import "KoansDefines.h"
 
 @protocol TestDelegate <NSObject>
-- (void)protocolMethod;
-- (NSString *)protocolMethodWithArgument:(NSString *)string;
+- (void)didPerformAction;
+- (NSString *)textForMethodWithString:(NSString *)string;
 @end
 
 
@@ -33,12 +33,12 @@
     return self;
 }
 
-- (void)protocolMethod
+- (void)didPerformAction
 {
     self.methodCalled = YES;
 }
 
-- (NSString *)protocolMethodWithArgument:(NSString *)string
+- (NSString *)textForMethodWithString:(NSString *)string
 {
     return string;
 }
@@ -57,12 +57,12 @@
 
 - (void)callProtocolMethod
 {
-    [self.delegate protocolMethod];
+    [self.delegate didPerformAction];
 }
 
 - (void)callProtocolMethodWithArgument
 {
-    [self.delegate protocolMethodWithArgument:@"Protocol Method Argument"];
+    [self.delegate textForMethodWithString:@"Protocol Method Argument"];
 }
 
 + (id<TestDelegate>)classConformingToDelegate
@@ -93,7 +93,7 @@
     //Delegation is a very common pattern in Objective-C. Sometimes a class will define a
     //protocol that will have methods the class will call when it needs additional information
     //or it wants to inform the delegate that something has happened, passing any relevant
-    //information.
+    //information. Essentially, a delegate acts on behalf of another object.
     classWithDelegate.delegate = classImplementingProtocol;
     
     XCTAssertEqualObjects(__, classWithDelegate.delegate);
@@ -116,7 +116,7 @@
     ClassImplementingProtocol *classImplementingProtocol = [[ClassImplementingProtocol alloc] init];
     
     classWithDelegate.delegate = classImplementingProtocol;
-    NSString *string = [classWithDelegate.delegate protocolMethodWithArgument:@"Protocol Argument"];
+    NSString *string = [classWithDelegate.delegate textForMethodWithString:@"Protocol Argument"];
     
     XCTAssertEqualObjects(__, string);
 }
@@ -128,10 +128,10 @@
     //Because we can also return types such as 'id<TestDelegate>' from methods, it allows
     //us to hide implementations that we dont wish callers to see. For instance, if we
     //had a custom class in our library that we didnt want to full expose, we could
-    //extract part of the class into a protocol then return type 'id<{Protocol}>' to
+    //extract part of the class into a protocol then return type 'id<Protocol>' to
     //only expose the methods defined in the protocol, rather than the whole class.
-    XCTAssertEqual(____, [protocolClass respondsToSelector:@selector(protocolMethod)]);
-    XCTAssertEqual(____, [protocolClass respondsToSelector:@selector(protocolMethodWithArgument:)]);
+    XCTAssertEqual(____, [protocolClass respondsToSelector:@selector(didPerformAction)]);
+    XCTAssertEqual(____, [protocolClass respondsToSelector:@selector(textForMethodWithString:)]);
 }
 
 @end
