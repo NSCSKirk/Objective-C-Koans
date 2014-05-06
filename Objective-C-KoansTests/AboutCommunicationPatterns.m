@@ -47,6 +47,9 @@
     
     self.kvoString = @"String Set Through KVO";
     
+    //Dont forget this step. This can easily lead to crashes. Typically, you would
+    //remove the observer in dealloc or when a controller is removed from the
+    //hierarchy.
     [self removeObserver:self forKeyPath:@"kvoString"];
 }
 
@@ -55,6 +58,11 @@
     XCTAssertEqualObjects(__, keyPath);
     XCTAssertEqualObjects(__, object);
     XCTAssertEqual(__, change[@"kind"]);
+}
+
+- (void)testGrandCentralDispatchAidesTheExecutionOfConcurrentCode
+{
+
 }
 
 @end
