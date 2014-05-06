@@ -19,14 +19,14 @@
 {
     NSURL *url = [NSURL URLWithString:@"http://github.com"];
     
-    XCTAssertEqualObjects(@"http://github.com", url.absoluteString);
+    XCTAssertEqualObjects(@"http://github.com", [url absoluteString]);
 }
 
 - (void)testURLsCanBeCreatedInPiecesInTheInitializer
 {
     NSURL *url = [[NSURL alloc] initWithScheme:@"http" host:@"github.com" path:@"/WinterKirk"];
     
-    XCTAssertEqualObjects(@"http://github.com/WinterKirk", url.absoluteString);
+    XCTAssertEqualObjects(@"http://github.com/WinterKirk", [url absoluteString]);
 }
 
 - (void)testURLComponentsCanBeExtractedFromAnNSURL
@@ -42,6 +42,13 @@
     XCTAssertEqualObjects(__, [url pathExtension]);
     XCTAssertEqualObjects(__, [url query]);
     XCTAssertEqualObjects(__, [url fragment]);
+}
+
+- (void)testNSURLReturnsNilWhenPassedAnInvalidURL
+{
+    NSURL *url = [NSURL URLWithString:@"---->NOT A URL!<----"];
+    
+    XCTAssertEqualObjects(__, url);
 }
 
 @end
