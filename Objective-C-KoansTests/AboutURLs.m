@@ -51,4 +51,22 @@
     XCTAssertEqualObjects(__, url);
 }
 
+- (void)testNSURLComponentsCanSetComponentsInPieces
+{
+    NSURLComponents *components = [[NSURLComponents alloc] init];
+    
+    components.scheme = @"https";
+    components.user = @"Dave";
+    components.password = @"pass11";
+    components.host = @"bitbicket.org";
+    components.port = @80;
+    components.path = @"/Test/ThisIsHowWeDoIt.git";
+    components.query = @"id=5&category=7";
+    components.fragment = @"source";
+    
+    NSURL *url = [components URL];
+    
+    XCTAssertEqualObjects(__, [url absoluteString]);
+}
+
 @end
