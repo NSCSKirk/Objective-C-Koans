@@ -7,6 +7,21 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "KoansDefines.h"
+
+@interface NSString (KoansExtensions)
+- (NSString *)stringByTrimmingWhitespace;
+@end
+
+@implementation NSString (KoansExtensions)
+
+- (NSString *)stringByTrimmingWhitespace
+{
+    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@" "];
+    return [self stringByTrimmingCharactersInSet:characterSet];
+}
+
+@end
 
 @interface AboutCategories : XCTestCase
 
@@ -14,6 +29,13 @@
 
 @implementation AboutCategories
 
-
+- (void)testCategoriesAddMethodsToExistingClasses
+{
+    NSString *string = @"  This is super fun!   ";
+    
+    string = [string stringByTrimmingWhitespace];
+    
+    XCTAssertEqualObjects(__, string);
+}
 
 @end
